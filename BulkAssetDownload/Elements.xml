@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction 
+    Id="Ribbon.Library.Actions.Scripts" 
+    Location="ScriptLink" 
+    ScriptSrc="BulkAssetDownload/BulkAssetDownload.js" />
+  <CustomAction 
+    Id="DownloadAssetCustomRibbonButton" 
+    RegistrationId="0x0101" 
+    RegistrationType="ContentType" 
+    Location="CommandUI.Ribbon" 
+    Sequence="5" 
+    Title="Bulk Download">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition 
+          Location="Ribbon.Documents.Copies.Controls._children">
+          <Button 
+            CommandType="OptionSelection" 
+            Id="Ribbon.Documents.New.DownloadAssetButton" 
+            ToolTipTitle="Bulk Download" 
+            ToolTipDescription="Use this option to download multiple files up to 200 MB" 
+            Alt="Bulk Download" 
+            Sequence="5" 
+            Command="Download_Assets" 
+            Image32by32="/_layouts/images/BulkAssetDownload/BulkAssetDownload32.png" 
+            Image16by16="/_layouts/images/BulkAssetDownload/BulkAssetDownload16.png" 
+            LabelText="Bulk Download" 
+            TemplateAlias="o1" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler 
+          Command="Download_Assets" 
+          EnabledScript="javascript:EnableAssetDownloadButton();" 
+          CommandAction="javascript:ShowAssetDownloadPopUp('{SiteUrl}');" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>

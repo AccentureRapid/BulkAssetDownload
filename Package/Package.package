@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="a6553f66-abdb-451b-bf8f-fd876e43c4ed" solutionId="a6553f66-abdb-451b-bf8f-fd876e43c4ed" resetWebServer="false" name="BulkAssetDownload" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="710b02a3-05af-4fad-b4be-a30cd2c75e92" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="6e9c0b6b-45c6-409d-8f8e-66cf019c0f74" />
+    <projectItemReference itemId="b1385261-8a35-44a8-aa21-f9740c58c6d4" />
+    <projectItemReference itemId="9d545116-5bf2-4368-a7ca-a1a47dfbd601" />
+  </projectItems>
+</package>
